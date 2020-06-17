@@ -50,7 +50,6 @@ function ProductTable(props) {
       </tbody>
     </table>
   );
-
 }
 
 export default ProductTable;

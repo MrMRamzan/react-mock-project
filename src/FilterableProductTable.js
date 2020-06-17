@@ -7,7 +7,6 @@ function FilterableProductTable(props) {
 
   return(
     <div>
-    <p>{`${searchData.searchKW} ${searchData.getStock}`}</p>
       <SearchBar dataHandler={setSearchData} />
       <ProductTable searchData= {searchData} />
     </div>

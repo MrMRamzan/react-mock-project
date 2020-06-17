@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function ProductCategoryRow(props) {
   return(
     <tr>
@@ -8,4 +7,5 @@ function ProductCategoryRow(props) {
     </tr>
   );
 }
+
 export default ProductCategoryRow;
