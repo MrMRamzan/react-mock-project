@@ -18,7 +18,7 @@ function SearchBar(props) {
 
   return(
     <form>
-      <input type="text" value={searchText} onChange={handleChange} /><br/>
+      <input type="text" value={searchText} onChange={handleChange} placeholder="Search..."/><br/>
       <input type="checkbox" value={isStocked} onChange={handleCheckedValue} />Only show products in stock
     </form>
   );

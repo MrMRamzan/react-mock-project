@@ -10,19 +10,27 @@ function ProductTable(props) {
   const prepare_data = () => {
     const categories = {};
 
-    data.map((item) => {
+    const filteredData = data.filter((item) => {
+      if (item.name.includes(searchData.searchKW) || item.stocked === searchData.getStock) {
+        return true;
+      }
+      return false;
+    });
+
+    filteredData.map((item) => {
       if (categories[item.category]) {
         categories[item.category] = [...categories[item.category], item];
       } else {
         categories[item.category] = [item];
       }
     });
+
     setPreparedData(categories);
     };
 
     useEffect(() => {
       prepare_data();
-    }, []);
+    }, [searchData]);
   
   return(
     <table>
